@@ -1,23 +1,21 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Inter'sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
+    font: 500 16px 'Inter'sans-serif;
 }
 
 input {
-    color: #AEAEAE;
     width: 307px;
     height: 37.5px;
-    background: #F6F6F6;
+    background-color: #F6F6F6;
     border: 1px solid #E8E8E8;
     border-radius: 8px;
     margin: 21.4px 26px 0px;
-    padding-left: 16px; 
+    padding-left: 16px;
+    outline: none;
 }
+
 .block {
     width: 360px;
     height: 529px;
@@ -27,17 +25,14 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
 
 .hschool {
     margin: 45px 118px 0px 118px;
     width: 124px;
     height: 38px;
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 38px;
+    font: 900 30px 'Mulish';
     color: #001A49;
 }
 
@@ -47,29 +42,23 @@ input {
 
 .btn {
     margin: 21.4px 26px 0px;
-    height: 37.58092498779297px;
+    height: 37.580px;
     width: 323px;
     border-radius: 8px;
-    background: #8589E4;
+    background-color: #8589E4;
     border: 1px solid #4945F9;
     color: #FFFFFF;
 }
 
 .private_policy {
     margin: 10px 41px auto 41px;
-    margin-left: 41px;
     justify-content: left;
     width: 278px;
     height: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font: 500 12px 'Montserrat';
     color: #000000;
 }
+
 .private_policy b {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 800;
+    font: 800 12px 'Montserrat';
 }
