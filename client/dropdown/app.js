@@ -55,6 +55,7 @@ inp_img.addEventListener(`click`, () => {
 
 kit.addEventListener(`click`, (event) => {
     try {
+        
         input.value = event.target.textContent;
         img.style = `${downarrow}`;
         kit.innerHTML=''
