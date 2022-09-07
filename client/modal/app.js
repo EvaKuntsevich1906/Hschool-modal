@@ -23,25 +23,44 @@ btn.addEventListener(`click`, async () => {
         const email = document.querySelector(`.input_email`).value.trim();
         const password = document.querySelector(`.input_password`).value.trim();
         const doublepassword = document.querySelector(`.input_confpassword`).value.trim();
+        const allUsers = document.querySelector(".allUsers")
 
         // if (checkName(name) &&
-        // checkEmail(email) &&
-        // checkPassword(password, doublepassword)) {
+        //     checkEmail(email) &&
+        //     checkPassword(password, doublepassword)) {
+        let ob = {
+            name: name,
+            email: email,
+            password: password
+        }
         const response = await fetch(`http://localhost:5000/api/register`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                password: password
-            })
+            body: JSON.stringify(ob)
         })
-        const jsonresponse = response.json()
-        alert(`Вы успешно зарегестрированы в системе, ${jsonresponse.name}!`)
-        // }
+        const jsonresponse = await response.json()
+        alert(`Вы успешно зарегестрированы в системе!`);
+
+        const resName = await fetch(`http://localhost:5000/api/register`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        const nickNames = await resName.json()
+        console.log(nickNames);
+        const allUsersNames = [];
+
+        for (let i = 0; i < nickNames.length; i++) {
+            allUsersNames.push(nickNames[i].name)
+
+        }
+        allUsers.innerHTML = allUsersNames
     } catch (err) {
         alert(err.message)
     }
-})
+
+});
